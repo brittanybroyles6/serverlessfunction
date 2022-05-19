@@ -11,7 +11,7 @@ exports.handler = async (event, context) => {
     const jsonJoke = await jokeStream.json();
     return {
       statusCode: 200,
-      body: JSON.stringify(jsonJoke)
+      body: jsonJoke
     };
   } catch (err) {
     return { statusCode: 422, body: err.stack };
