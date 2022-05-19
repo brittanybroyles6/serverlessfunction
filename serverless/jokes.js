@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 
 exports.handler = async (event, context) => {
-  const url = "https://icanhazdadjoke.com/";
+  const url = "https://dadjokegenerator.com/";
   try {
     const jokeStream = await fetch(url, {
       headers: {
