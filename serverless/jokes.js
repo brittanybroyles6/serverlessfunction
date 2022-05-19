@@ -1,6 +1,6 @@
-const fetch = require("node-fetch");
+import fetch from "node-fetch";
 
-exports.handler = async (event, context) => {
+export async function handler(event, context) {
   const url = "https://dadjokegenerator.com/";
   try {
     const jokeStream = await fetch(url, {
@@ -16,4 +16,4 @@ exports.handler = async (event, context) => {
   } catch (err) {
     return { statusCode: 422, body: err.stack };
   }
-};
+}
